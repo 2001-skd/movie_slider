@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+section {
+  background-color: cadetblue;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  font: bold clamp(1.5rem, 4vw, 2rem) / 1.2 sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  /* border: 2px solid red; */
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  /* min-height: 100vh; */
+  border-radius: 30px;
+  aspect-ratio: 16 / 9;
+}
+
+.container .slider {
+  /* margin: 50px 0; */
+  position: relative;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.container .slider .slider_item {
+  width: 100%;
+  transition: 0.3s all linear;
+  border-radius: 30px;
+}
+
+.slider_navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  pointer-events: none;
+  inset: 0;
+  /* background-color: red; */
+}
+
+/* .slider_navigation .prev_arrow {
+
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: violet;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+.slider_navigation .next_arrow {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background: violet;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  cursor: pointer;
+} */
+
+.slider_navigation .prev_arrow,
+.slider_navigation .next_arrow {
+  pointer-events: auto; /* re‑enable click on the buttons themselves */
+  width: clamp(2rem, 6vw, 3.5rem);
+  height: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.slider_navigation .prev_arrow:hover,
+.slider_navigation .next_arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.container .slider .slider_item img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  /* display: block; */
+}
